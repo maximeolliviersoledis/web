@@ -17,6 +17,6 @@ export class HomePage implements OnInit{
 
     	const browser = this.iab.create('https://ionic.io','_self',{location:'no'}); 
 
-	}
+	} 
 
 }
