@@ -15,7 +15,7 @@ export class HomePage implements OnInit{
 
   	ngOnInit(){
 
-    	const browser = this.iab.create('https://ionic.io','_self',{location:'no'}); 
+    	const browser = this.iab.create('https://www.champion-direct.com/','_self',{location:'no'}); 
 
 	} 
 
