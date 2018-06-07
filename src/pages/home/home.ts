@@ -8,15 +8,13 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 })
 export class HomePage implements OnInit{
 
-  	constructor(public navCtrl: NavController,
-  			 	private iab: InAppBrowser) {
-
-  	}
+  	constructor(
+  		public navCtrl: NavController,
+  		private iab: InAppBrowser
+  	) {}
 
   	ngOnInit(){
-
-    	const browser = this.iab.create('https://www.champion-direct.com/','_self',{location:'no'}); 
-
+    	const browser = this.iab.create('https://www.champion-direct.com/','_self',{location:'no'});
 	} 
 
 }
