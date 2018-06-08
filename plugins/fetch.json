@@ -17,7 +17,7 @@
   "cordova-plugin-firebase": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-firebase"
+      "id": "cordova-plugin-firebase@0.1.22"
     },
     "is_top_level": true,
     "variables": {}
