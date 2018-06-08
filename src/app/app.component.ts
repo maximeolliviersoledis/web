@@ -27,6 +27,7 @@ export class MyApp {
       // Listen to incoming messages
       fcm.listenToNotifications().pipe(
         tap(msg => {
+          console.log(msg);
           // show a toast
           const toast = toastCtrl.create({
             message: msg.body,

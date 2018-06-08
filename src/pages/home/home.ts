@@ -14,7 +14,10 @@ export class HomePage implements OnInit{
   	) {}
 
   	ngOnInit(){
-    	const browser = this.iab.create('https://www.champion-direct.com/','_self',{location:'no'});
+    	this.iab.create('https://www.champion-direct.com/la-selection-100-ans-facom/servante-roll-edition-limitee-100-ans','_self',{
+    		location:'no',
+    		//toolbar:'no'
+    	});
 	} 
 
 }
