@@ -36,9 +36,9 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       // Get a FCM token
       //let token;
-      alert('la1');
+      
       fcm.getToken().then(token => {
-        alert('la3');
+        
         sldnotification.save(this.device.uuid, token);
 
       });

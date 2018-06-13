@@ -105,7 +105,9 @@ var FcmProvider = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
+                        alert('la21');
                         if (!this.platform.is('android')) return [3 /*break*/, 2];
+                        alert('la22');
                         return [4 /*yield*/, this.firebaseNative.getToken()];
                     case 1:
                         token = _a.sent();
@@ -120,7 +122,7 @@ var FcmProvider = /** @class */ (function () {
                         _a.sent();
                         _a.label = 5;
                     case 5:
-                        alert('la2');
+                        alert('la23');
                         return [2 /*return*/, this.saveTokenToFirestore(token)];
                 }
             });

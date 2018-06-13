@@ -17,11 +17,11 @@ export class HomePage implements OnInit{
   ) {}
 
   	ngOnInit(){
-    	/*this.iab.create('https://www.champion-direct.com/la-selection-100-ans-facom/servante-roll-edition-limitee-100-ans','_blank',{
+    	this.iab.create('https://www.champion-direct.com/la-selection-100-ans-facom/servante-roll-edition-limitee-100-ans','_blank',{
     		location:'no',
         toolbar: 'no'
     		//toolbar:'no'
-    	});*/
+    	});
 	 } 
 
    /*ionViewWillEnter(){
