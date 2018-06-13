@@ -98,6 +98,9 @@
 		12275566F8D04176B9CBA463 /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCFDF0DF4E94A4A8FE5D995 /* GCDWebServerStreamedResponse.m */; };
 		8D320CC4AF18411D94577664 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4B0BA6A09A4A96A9309AF0 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		858E777F3759461E9CE480FC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A4EC748407A24C2B9151988A /* libz.tbd */; };
+		B4CCCB3AB01A49FEBC32FC6B /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 71129951843747EFBC200913 /* UICKeyChainStore.m */; };
+		A4016AF6CD38416FAD5AE827 /* CDVUniqueDeviceID.m in Sources */ = {isa = PBXBuildFile; fileRef = 728FC4847B9C49C88B1591FF /* CDVUniqueDeviceID.m */; };
+		0964E87BC9444014A0771716 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C165EB51774A1A8D289542 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -284,6 +287,11 @@
 		941D969CFC8A4EC0B23940F9 /* GCDWebServerStreamedResponse.h */ = {isa = PBXFileReference; name = "GCDWebServerStreamedResponse.h"; path = "cordova-plugin-ionic-webview/GCDWebServerStreamedResponse.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		FA4B0BA6A09A4A96A9309AF0 /* WebKit.framework */ = {isa = PBXFileReference; name = "WebKit.framework"; path = "System/Library/Frameworks/WebKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		A4EC748407A24C2B9151988A /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		71129951843747EFBC200913 /* UICKeyChainStore.m */ = {isa = PBXFileReference; name = "UICKeyChainStore.m"; path = "cordova-plugin-uniquedeviceid/UICKeyChainStore.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		728FC4847B9C49C88B1591FF /* CDVUniqueDeviceID.m */ = {isa = PBXFileReference; name = "CDVUniqueDeviceID.m"; path = "cordova-plugin-uniquedeviceid/CDVUniqueDeviceID.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		883C6CE8C90A4DB8ABB059EB /* UICKeyChainStore.h */ = {isa = PBXFileReference; name = "UICKeyChainStore.h"; path = "cordova-plugin-uniquedeviceid/UICKeyChainStore.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		4A41B783415D4BEB9F5062B1 /* CDVUniqueDeviceID.h */ = {isa = PBXFileReference; name = "CDVUniqueDeviceID.h"; path = "cordova-plugin-uniquedeviceid/CDVUniqueDeviceID.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		09C165EB51774A1A8D289542 /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +319,7 @@
 				C75F1C91396C46B48418E02C /* FirebaseMethodSwizzler.framework in Frameworks */,
 				8D320CC4AF18411D94577664 /* WebKit.framework in Frameworks */,
 				858E777F3759461E9CE480FC /* libz.tbd in Frameworks */,
+				0964E87BC9444014A0771716 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +410,7 @@
 				376B6A169FCE42BCB56C9567 /* FirebaseMethodSwizzler.framework */,
 				FA4B0BA6A09A4A96A9309AF0 /* WebKit.framework */,
 				A4EC748407A24C2B9151988A /* libz.tbd */,
+				09C165EB51774A1A8D289542 /* Security.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -552,6 +562,10 @@
 				AE34D04DC3784C9C8E184224 /* GCDWebServerErrorResponse.h */,
 				532CFCAFE4CC4CA5B603A7A7 /* GCDWebServerFileResponse.h */,
 				941D969CFC8A4EC0B23940F9 /* GCDWebServerStreamedResponse.h */,
+				71129951843747EFBC200913 /* UICKeyChainStore.m */,
+				728FC4847B9C49C88B1591FF /* CDVUniqueDeviceID.m */,
+				883C6CE8C90A4DB8ABB059EB /* UICKeyChainStore.h */,
+				4A41B783415D4BEB9F5062B1 /* CDVUniqueDeviceID.h */,
 			);
 			name = Plugins;
 			path = "web/Plugins";
@@ -727,6 +741,8 @@
 				198142AE44A442E6913A2710 /* GCDWebServerErrorResponse.m in Sources */,
 				FDC79CE8425642D394D55037 /* GCDWebServerFileResponse.m in Sources */,
 				12275566F8D04176B9CBA463 /* GCDWebServerStreamedResponse.m in Sources */,
+				B4CCCB3AB01A49FEBC32FC6B /* UICKeyChainStore.m in Sources */,
+				A4016AF6CD38416FAD5AE827 /* CDVUniqueDeviceID.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

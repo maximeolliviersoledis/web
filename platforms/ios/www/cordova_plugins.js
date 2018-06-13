@@ -57,6 +57,14 @@ module.exports = [
     "clobbers": [
       "cordova.exec"
     ]
+  },
+  {
+    "id": "cordova-plugin-uniquedeviceid.UniqueDeviceID",
+    "file": "plugins/cordova-plugin-uniquedeviceid/www/uniqueid.js",
+    "pluginId": "cordova-plugin-uniquedeviceid",
+    "merges": [
+      "window.plugins.uniqueDeviceID"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -69,7 +77,8 @@ module.exports.metadata =
   "cordova-plugin-ionic": "4.1.7",
   "cordova-plugin-ionic-keyboard": "2.0.5",
   "cordova-plugin-ionic-webview": "1.1.19",
-  "cordova-plugin-whitelist": "1.3.3"
+  "cordova-plugin-whitelist": "1.3.3",
+  "cordova-plugin-uniquedeviceid": "1.3.2"
 };
 // BOTTOM OF METADATA
 });

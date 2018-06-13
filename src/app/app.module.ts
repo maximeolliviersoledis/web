@@ -4,6 +4,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { Device } from '@ionic-native/device';
 
 import { Firebase } from '@ionic-native/firebase';
 
@@ -14,6 +16,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { FcmProvider } from '../providers/fcm/fcm';
+import { SldnotificationProvider } from '../providers/sldnotification/sldnotification';
 
 const firebase = {
   apiKey: "AIzaSyAF7lnc_tO1nQTPsex4TM1rp1wLPI9D11w",
@@ -34,6 +37,7 @@ const firebase = {
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebase), 
     AngularFirestoreModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -47,8 +51,8 @@ const firebase = {
     Firebase,
     FcmProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    FcmProvider,
-    FcmProvider
+    SldnotificationProvider,
+    Device
   ]
 })
 export class AppModule {}
