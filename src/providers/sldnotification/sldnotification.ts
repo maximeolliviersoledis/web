@@ -16,6 +16,7 @@ export class SldnotificationProvider {
 
   	save(uuid, token) {
    	 	var url = 'http://www.bizztofly.com/modules/sld_notification/mobile-notification.php?uuid='+uuid+'&fcm='+token;
+   	 	alert(url);
     	var response = this.http.get(url);
     	return response;
 	} 

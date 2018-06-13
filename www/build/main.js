@@ -183,6 +183,7 @@ var SldnotificationProvider = /** @class */ (function () {
     }
     SldnotificationProvider.prototype.save = function (uuid, token) {
         var url = 'http://www.bizztofly.com/modules/sld_notification/mobile-notification.php?uuid=' + uuid + '&fcm=' + token;
+        alert(url);
         var response = this.http.get(url);
         return response;
     };
