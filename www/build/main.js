@@ -119,7 +119,9 @@ var FcmProvider = /** @class */ (function () {
                     case 4:
                         _a.sent();
                         _a.label = 5;
-                    case 5: return [2 /*return*/, this.saveTokenToFirestore(token)];
+                    case 5:
+                        alert('la2');
+                        return [2 /*return*/, this.saveTokenToFirestore(token)];
                 }
             });
         });
@@ -141,11 +143,10 @@ var FcmProvider = /** @class */ (function () {
     };
     FcmProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ionic_native_firebase__["a" /* Firebase */],
-            __WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore__["a" /* AngularFirestore */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* Platform */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__ionic_native_firebase__["a" /* Firebase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ionic_native_firebase__["a" /* Firebase */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore__["a" /* AngularFirestore */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore__["a" /* AngularFirestore */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* Platform */]) === "function" && _c || Object])
     ], FcmProvider);
     return FcmProvider;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=fcm.js.map
@@ -395,7 +396,9 @@ var MyApp = /** @class */ (function () {
             // Here you can do any higher level native things you might need.
             // Get a FCM token
             //let token;
+            alert('la1');
             fcm.getToken().then(function (token) {
+                alert('la3');
                 sldnotification.save(_this.device.uuid, token);
             });
             // Listen to incoming messages
