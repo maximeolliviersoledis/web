@@ -15,10 +15,15 @@ export class SldnotificationProvider {
   	}
 
   	save(uuid, token) {
-   	 	var url = 'http://www.bizztofly.com/modules/sld_notification/mobile-notification.php?uuid='+uuid+'&fcm='+token;
-   	 	alert(url);
-    	var response = this.http.get(url);
-    	return response;
+
+   	 	let url = 'http://www.bizztofly.com/modules/sld_notification/mobile-notification.php?uuid='+uuid+'&fcm='+token;
+      return new Promise(resolve => {
+        this.http.get(url)
+        .subscribe();
+      });
+    	/*let response = await this.http.get(url);
+      console.log(response);
+    	return response;*/
 	} 
 
 }

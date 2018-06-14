@@ -121,7 +121,6 @@ var FcmProvider = /** @class */ (function () {
                         _a.label = 5;
                     case 5:
                         this.saveTokenToFirestore(token);
-                        alert(token);
                         return [2 /*return*/, token];
                 }
             });
@@ -185,10 +184,15 @@ var SldnotificationProvider = /** @class */ (function () {
         console.log('Hello SldnotificationProvider Provider');
     }
     SldnotificationProvider.prototype.save = function (uuid, token) {
+        var _this = this;
         var url = 'http://www.bizztofly.com/modules/sld_notification/mobile-notification.php?uuid=' + uuid + '&fcm=' + token;
-        alert(url);
-        var response = this.http.get(url);
-        return response;
+        return new Promise(function (resolve) {
+            _this.http.get(url)
+                .subscribe();
+        });
+        /*let response = await this.http.get(url);
+      console.log(response);
+        return response;*/
     };
     SldnotificationProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
