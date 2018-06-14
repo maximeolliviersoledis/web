@@ -105,9 +105,7 @@ var FcmProvider = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        alert('la21');
                         if (!this.platform.is('android')) return [3 /*break*/, 2];
-                        alert('la22');
                         return [4 /*yield*/, this.firebaseNative.getToken()];
                     case 1:
                         token = _a.sent();
@@ -122,8 +120,9 @@ var FcmProvider = /** @class */ (function () {
                         _a.sent();
                         _a.label = 5;
                     case 5:
-                        alert('la23');
-                        return [2 /*return*/, this.saveTokenToFirestore(token)];
+                        this.saveTokenToFirestore(token);
+                        alert(token);
+                        return [2 /*return*/, token];
                 }
             });
         });
@@ -229,11 +228,11 @@ var HomePage = /** @class */ (function () {
         this.showBtn = false;
     }
     HomePage.prototype.ngOnInit = function () {
-        /*this.iab.create('https://www.champion-direct.com/la-selection-100-ans-facom/servante-roll-edition-limitee-100-ans','_blank',{
-            location:'no',
-        toolbar: 'no'
+        this.iab.create('https://www.champion-direct.com/la-selection-100-ans-facom/servante-roll-edition-limitee-100-ans', '_blank', {
+            location: 'no',
+            toolbar: 'no'
             //toolbar:'no'
-        });*/
+        });
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
@@ -398,9 +397,7 @@ var MyApp = /** @class */ (function () {
             // Here you can do any higher level native things you might need.
             // Get a FCM token
             //let token;
-            alert('la1');
             fcm.getToken().then(function (token) {
-                alert('la3');
                 sldnotification.save(_this.device.uuid, token);
             });
             // Listen to incoming messages
