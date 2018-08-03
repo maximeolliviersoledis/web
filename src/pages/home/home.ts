@@ -1,69 +1,170 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { NavController, Platform, NavParams } from 'ionic-angular';
+import { ThemeableBrowser, ThemeableBrowserOptions, ThemeableBrowserObject } from '@ionic-native/themeable-browser';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 @Component({
   	selector: 'page-home',
-  	templateUrl: 'home.html'
+  	templateUrl: 'home.html',
+    providers: [ThemeableBrowser, BarcodeScanner]
 })
 export class HomePage implements OnInit{
   
-  showBtn: boolean = false;
-  deferredPrompt;
+  browser: ThemeableBrowserObject;
+  urlBeforeClose: string = "";
   
   constructor(
   	public navCtrl: NavController,
-  	private iab: InAppBrowser
+    private tb:ThemeableBrowser,
+    private platform:Platform,
+    private navParams: NavParams,
+    private barcodeScanner:BarcodeScanner
   ) {}
 
   	ngOnInit(){
-    	this.iab.create('https://www.champion-direct.com/la-selection-100-ans-facom/servante-roll-edition-limitee-100-ans','_blank',{
-    		location:'no',
-        toolbar: 'no'
-    		//toolbar:'no'
-    	});
+        this.urlBeforeClose = 'https://www.champion-direct.com';
 	 } 
 
-   /*ionViewWillEnter(){
+   ionViewDidEnter(){
+       //Permet peut-être de régler le bug de la page qui ne se lance pas au démarrage en attendant que la page
+       //Devienne la page active
+       this.reopenBrowser(); 
+   }
 
-    window.addEventListener('beforeinstallprompt', (e) => {
-     
-      // Prevent Chrome 67 and earlier from automatically showing the prompt
-      e.preventDefault();
-      // Stash the event so it can be triggered later on the button event.
-      this.deferredPrompt = e;
-       
-    // Update UI by showing a button to notify the user they can add to home screen
-      this.showBtn = true;
-    });
-     
-    //button click event to show the promt
-             
-    window.addEventListener('appinstalled', (event) => {
-     alert('installed');
-    });
-     
-     
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-      alert('display-mode is standalone');
-    }
-  }
- 
-  add_to_home(e){
-    debugger
-    // hide our user interface that shows our button
-    // Show the prompt
-    this.deferredPrompt.prompt();
-    // Wait for the user to respond to the prompt
-    this.deferredPrompt.userChoice
-      .then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          alert('User accepted the prompt');
-        } else {
-          alert('User dismissed the prompt');
-        }
-        this.deferredPrompt = null;
-      });
-  };*/
+   reopenBrowser(){
+     if(this.isIos()){
+        const options: ThemeableBrowserOptions = {
+          statusbar: {
+            color: '#f53d3d'
+          },
+          toolbar: {
+            height: 44,
+            color: '#ffffff'
+          },     
+          title: {
+            color: '#003264ff',
+            showPageTitle: true
+          },
+          backButton: {
+            image: 'ic_action_previous_item',
+            imagePressed: 'ic_action_previous_item',    
+            align: 'left',
+            event: 'backPressed'
+          },
+          forwardButton: {
+              image: 'ic_action_next_item',
+              imagePressed: 'ic_action_next_item',
+              align: 'left',
+              event: 'forwardPressed'
+          },
+          closeButton: {
+            //image: 'ic_action_remove',
+            //imagePressed: 'ic_action_remove',
+            image: 'scan',
+            imagePressed: 'scan',
+            align: 'right',
+            event: 'closePressed'
+          },
+          /*customButtons: [
+            {
+              image: 'scan',
+              imagePressed: 'scan',
+              align: 'right',
+              event: 'scanPressed'
+            }
+          ],*/
+         /* menu: {
+            image: 'scan',
+            imagePressed: 'scan',
+            title: 'Menu',
+            cancel: 'Cancel',
+            align: 'right',
+            items: [
+              {
+                event: 'menuScanPressed',
+                label: 'Scanner un code barre'
+              }
+            ]
+          },*/
+          backButtonCanClose: false //Pour éviter des effets indésirables
+        };
 
+       this.browser = this.tb.create(this.urlBeforeClose,'_blank', options);
+       this.browser.on('closePressed').subscribe((event) => {
+         this.browser. close();
+         console.log('launching scanner after close');
+         this.urlBeforeClose = event.url;
+         this.openScanner();
+       }, (error)=>{
+         console.log(JSON.stringify(error));
+       });
+     }else{
+       const options: ThemeableBrowserOptions = {
+          statusbar: {
+            color: '#f53d3d'
+          },
+          toolbar: {
+            height: 44,
+            color: '#ffffff'
+          },     
+          title: {
+            color: '#003264ff',
+            showPageTitle: true
+          },
+          backButton: {
+            image: 'ic_action_previous_item',
+            imagePressed: 'ic_action_previous_item',    
+            align: 'left',
+            event: 'backPressed'
+          },
+          forwardButton: {
+              image: 'ic_action_next_item',
+              imagePressed: 'ic_action_next_item',
+              align: 'left',
+              event: 'forwardPressed'
+          },
+          closeButton: {
+            image: 'ic_action_remove',
+            imagePressed: 'ic_action_remove',
+            align: 'left',
+            event: 'closePressed'
+          },
+          customButtons: [
+            {
+              image: 'scan',
+              imagePressed: 'scan',
+              align: 'right',
+              event: 'scanButtonPressed'
+            }
+          ],
+          backButtonCanClose: false //Pour éviter des effets indésirables
+        };
+
+       this.browser = this.tb.create(this.urlBeforeClose,'_blank', options);
+       this.browser.on('closePressed').subscribe((event) => {
+         this.platform.exitApp();
+       }, (error)=>{
+         console.log(JSON.stringify(error));
+       });
+     }
+
+     this.browser.on('scanButtonPressed').subscribe((event)=>{
+       this.browser.close();
+       this.urlBeforeClose = event.url;
+       this.openScanner();
+     })
+
+   }
+
+   openScanner(){
+     this.barcodeScanner.scan().then((result) => {
+       if(!result.cancelled)
+         this.urlBeforeClose = 'https://www.champion-direct.com/module/ambjolisearch/jolisearch?search_query='+result.text;
+       this.reopenBrowser();
+     })
+   }
+
+   isIos(){
+     return this.platform.is('ios');
+   }
 }

@@ -1,3 +1,12 @@
 page-home {
+	.display-header{
+		z-index: 111;
+		color: #4f4f4f;
+		text-align: center;
+	}
 
+	.display-over-browser{
+		z-index: 99999999;
+		color: #f53d3d;
+	}
 }

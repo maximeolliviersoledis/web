@@ -1,1 +1,507 @@
-webpackJsonp([0],{176:function(a,n){function e(a){return Promise.resolve().then(function(){throw new Error("Cannot find module '"+a+"'.")})}e.keys=function(){return[]},e.resolve=e,a.exports=e,e.id=176},210:function(a,n){function e(a){return Promise.resolve().then(function(){throw new Error("Cannot find module '"+a+"'.")})}e.keys=function(){return[]},e.resolve=e,a.exports=e,e.id=210},241:function(a,n,e){"use strict";function t(a){return r._19(0,[(a()(),r.Z(0,0,null,null,2,"ion-nav",[],null,null,null,F.b,F.a)),r._14(6144,null,S.a,null,[D.a]),r.Y(2,4374528,null,0,D.a,[[2,M.a],[2,Y.a],Z.a,q.a,z.a,r.j,r.u,r.z,r.i,C.l,E.a,[2,G.a],A.a,r.k],{root:[0,"root"]},null),(a()(),r._18(-1,null,["\n"]))],function(a,n){a(n,2,0,n.component.rootPage)},null)}function o(a){return r._19(0,[(a()(),r.Z(0,0,null,null,2,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,V.b,V.a)),r.Y(1,4374528,null,0,X.a,[q.a,z.a,A.a,r.j,r.z,Z.a,H.a,r.u,[2,M.a],[2,Y.a]],null,null),(a()(),r._18(-1,1,["\n \n"]))],null,function(a,n){a(n,0,0,r._11(n,1).statusbarPadding,r._11(n,1)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var l=e(47),r=e(0),i=(e(1),e(63),e(100)),u=e(102),c=e(103),s=e(150),_=e(151),f=e(152),p=this&&this.__awaiter||function(a,n,e,t){return new(e||(e=Promise))(function(o,l){function r(a){try{u(t.next(a))}catch(a){l(a)}}function i(a){try{u(t.throw(a))}catch(a){l(a)}}function u(a){a.done?o(a.value):new e(function(n){n(a.value)}).then(r,i)}u((t=t.apply(a,n||[])).next())})},b=this&&this.__generator||function(a,n){function e(e){return function(r){return function(e){if(t)throw new TypeError("Generator is already executing.");for(;i;)try{if(t=1,o&&(l=o[2&e[0]?"return":e[0]?"throw":"next"])&&!(l=l.call(o,e[1])).done)return l;switch(o=0,l&&(e=[0,l.value]),e[0]){case 0:case 1:l=e;break;case 4:return i.label++,{value:e[1],done:!1};case 5:i.label++,o=e[1],e=[0];continue;case 7:e=i.ops.pop(),i.trys.pop();continue;default:if(l=i.trys,!(l=l.length>0&&l[l.length-1])&&(6===e[0]||2===e[0])){i=0;continue}if(3===e[0]&&(!l||e[1]>l[0]&&e[1]<l[3])){i.label=e[1];break}if(6===e[0]&&i.label<l[1]){i.label=l[1],l=e;break}if(l&&i.label<l[2]){i.label=l[2],i.ops.push(e);break}l[2]&&i.ops.pop(),i.trys.pop();continue}e=n.call(a,i)}catch(a){e=[6,a],o=0}finally{t=l=0}if(5&e[0])throw e[1];return{value:e[0]?e[1]:void 0,done:!0}}([e,r])}}var t,o,l,r,i={label:0,sent:function(){if(1&l[0])throw l[1];return l[1]},trys:[],ops:[]};return r={next:e(0),throw:e(1),return:e(2)},"function"==typeof Symbol&&(r[Symbol.iterator]=function(){return this}),r},h=function(){function a(a,n,e){this.firebaseNative=a,this.afs=n,this.platform=e,console.log("Hello FcmProvider Provider")}return a.prototype.getToken=function(){return p(this,void 0,void 0,function(){var a;return b(this,function(n){switch(n.label){case 0:return this.platform.is("android")?[4,this.firebaseNative.getToken()]:[3,2];case 1:a=n.sent(),n.label=2;case 2:return this.platform.is("ios")?[4,this.firebaseNative.getToken()]:[3,5];case 3:return a=n.sent(),[4,this.firebaseNative.grantPermission()];case 4:n.sent(),n.label=5;case 5:return[2,this.saveTokenToFirestore(a)]}})})},a.prototype.saveTokenToFirestore=function(a){if(a){var n={token:a,userId:"capsul"};return this.afs.collection("devices").doc(a).set(n)}},a.prototype.listenToNotifications=function(){return this.firebaseNative.onNotificationOpen()},a}(),d=e(36),m=function(){function a(a,n){this.navCtrl=a,this.iab=n}return a.prototype.ngOnInit=function(){this.iab.create("https://www.champion-direct.com/la-selection-100-ans-facom/servante-roll-edition-limitee-100-ans","_blank",{location:"no",toolbar:"no"})},a}(),v=function(){return function(a,n,e,t,o){this.rootPage=m,a.ready().then(function(){t.getToken(),t.listenToNotifications().pipe(Object(d.tap)(function(a){console.log(a),o.create({message:a.body,duration:3e3}).present()})).subscribe(),n.styleDefault(),e.hide()})}}(),y=function(){return function(){}}(),w=e(64),g=e(271),k=e(272),T=e(273),P=e(274),j=e(275),x=e(276),N=e(277),O=e(278),I=e(279),F=e(280),S=e(49),D=e(71),M=e(6),Y=e(31),Z=e(12),q=e(2),z=e(5),C=e(9),E=e(43),G=e(18),A=e(13),B=e(98),L=r.X({encapsulation:2,styles:[],data:{}}),R=r.V("ng-component",v,function(a){return r._19(0,[(a()(),r.Z(0,0,null,null,1,"ng-component",[],null,null,null,t,L)),r.Y(1,49152,null,0,v,[z.a,u.a,i.a,h,B.a],null,null)],null,null)},{},{},[]),V=e(281),X=e(34),H=e(45),J=r.X({encapsulation:2,styles:[],data:{}}),K=r.V("page-home",m,function(a){return r._19(0,[(a()(),r.Z(0,0,null,null,1,"page-home",[],null,null,null,o,J)),r.Y(1,114688,null,0,m,[Y.a,c.a],null,null)],function(a,n){a(n,1,0)},null)},{},{},[]),Q=e(19),U=e(149),W=e(25),$=e(120),aa=e(122),na=e(146),ea=e(24),ta=e(46),oa=e(128),la=e(237),ra=e(66),ia=e(53),ua=e(130),ca=e(86),sa=e(135),_a=e(145),fa=e(236),pa=e(147),ba=e(41),ha=e(129),da=e(148),ma=r.W(y,[w.b],function(a){return r._7([r._8(512,r.i,r.S,[[8,[g.a,k.a,T.a,P.a,j.a,x.a,N.a,O.a,I.a,R,K]],[3,r.i],r.s]),r._8(5120,r.r,r._15,[[3,r.r]]),r._8(4608,Q.k,Q.j,[r.r,[2,Q.t]]),r._8(5120,r.b,r._1,[]),r._8(5120,r.p,r._9,[]),r._8(5120,r.q,r._12,[]),r._8(4608,l.c,l.q,[Q.c]),r._8(6144,r.D,null,[l.c]),r._8(4608,l.f,U.a,[]),r._8(5120,l.d,function(a,n,e,t,o){return[new l.k(a,n),new l.o(e),new l.n(t,o)]},[Q.c,r.u,Q.c,Q.c,l.f]),r._8(4608,l.e,l.e,[l.d,r.u]),r._8(135680,l.m,l.m,[Q.c]),r._8(4608,l.l,l.l,[l.e,l.m]),r._8(6144,r.B,null,[l.l]),r._8(6144,l.p,null,[l.m]),r._8(4608,r.G,r.G,[r.u]),r._8(4608,l.h,l.h,[Q.c]),r._8(4608,l.i,l.i,[Q.c]),r._8(4608,W.k,W.k,[]),r._8(4608,W.c,W.c,[]),r._8(5120,_.b,_.f,[_.d,[2,_.c]]),r._8(4608,f.a,f.a,[_.d,[2,_.c],[2,f.c],[2,f.d],r.w,r.u]),r._8(4608,$.a,$.a,[Z.a,q.a]),r._8(4608,aa.a,aa.a,[Z.a,q.a]),r._8(4608,na.a,na.a,[]),r._8(4608,ea.a,ea.a,[]),r._8(4608,ta.a,ta.a,[z.a]),r._8(4608,H.a,H.a,[q.a,z.a,r.u,A.a]),r._8(4608,oa.a,oa.a,[Z.a,q.a]),r._8(5120,Q.f,la.b,[Q.q,[2,Q.a],q.a]),r._8(4608,Q.e,Q.e,[Q.f]),r._8(5120,ra.b,ra.d,[Z.a,ra.a]),r._8(5120,G.a,G.b,[Z.a,ra.b,Q.e,ia.b,r.i]),r._8(4608,ua.a,ua.a,[Z.a,q.a,G.a]),r._8(4608,ca.a,ca.a,[Z.a,q.a]),r._8(4608,sa.a,sa.a,[Z.a,q.a,G.a]),r._8(4608,_a.a,_a.a,[q.a,z.a,A.a,Z.a,C.l]),r._8(4608,B.a,B.a,[Z.a,q.a]),r._8(4608,E.a,E.a,[z.a,q.a]),r._8(4608,u.a,u.a,[]),r._8(4608,i.a,i.a,[]),r._8(4608,c.a,c.a,[]),r._8(4608,s.a,s.a,[]),r._8(4608,h,h,[s.a,f.a,z.a]),r._8(512,Q.b,Q.b,[]),r._8(512,r.k,fa.a,[]),r._8(256,q.b,{},[]),r._8(1024,pa.a,pa.b,[]),r._8(1024,z.a,z.b,[l.b,pa.a,r.u]),r._8(1024,q.a,q.c,[q.b,z.a]),r._8(512,A.a,A.a,[z.a]),r._8(512,ba.a,ba.a,[]),r._8(512,Z.a,Z.a,[q.a,z.a,[2,ba.a]]),r._8(512,C.l,C.l,[Z.a]),r._8(256,ra.a,{links:[]},[]),r._8(512,r.h,r.h,[]),r._8(512,ha.a,ha.a,[r.h]),r._8(1024,ia.b,ia.c,[ha.a,r.o]),r._8(1024,r.c,function(a,n,e,t,o,r,i,u,c,s,_,f,p){return[l.s(a),da.a(n),na.b(e,t),_a.b(o,r,i,u,c),ia.d(s,_,f,p)]},[[2,r.t],q.a,z.a,A.a,q.a,z.a,A.a,Z.a,C.l,q.a,ra.a,ia.b,r.u]),r._8(512,r.d,r.d,[[2,r.c]]),r._8(131584,r.f,r.f,[r.u,r.T,r.o,r.k,r.i,r.d]),r._8(512,r.e,r.e,[r.f]),r._8(512,l.a,l.a,[[3,l.a]]),r._8(512,W.j,W.j,[]),r._8(512,W.d,W.d,[]),r._8(512,W.i,W.i,[]),r._8(512,la.a,la.a,[]),r._8(512,_.a,_.a,[]),r._8(512,f.b,f.b,[]),r._8(512,y,y,[]),r._8(256,_.d,{apiKey:"AIzaSyAF7lnc_tO1nQTPsex4TM1rp1wLPI9D11w",authDomain:"capsule-f4a8a.firebaseapp.com",databaseURL:"https://capsule-f4a8a.firebaseio.com",projectId:"capsule-f4a8a",storageBucket:"capsule-f4a8a.appspot.com",messagingSenderId:"708163343895"},[]),r._8(256,_.c,void 0,[]),r._8(256,w.a,v,[]),r._8(256,Q.a,"/",[])])});Object(r.M)(),Object(l.j)().bootstrapModuleFactory(ma)}},[241]);
+webpackJsonp([1],{
+
+/***/ 183:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 183;
+
+/***/ }),
+
+/***/ 225:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"../pages/barcode-scanner/barcode-scanner.module": [
+		476,
+		0
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
+	});
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 225;
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ 276:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FcmProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_firebase__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore__ = __webpack_require__(274);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+var FcmProvider = /** @class */ (function () {
+    function FcmProvider(firebaseNative, afs, platform) {
+        this.firebaseNative = firebaseNative;
+        this.afs = afs;
+        this.platform = platform;
+        console.log('Hello FcmProvider Provider');
+    }
+    // Get permission from the user
+    FcmProvider.prototype.getToken = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var token;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!this.platform.is('android')) return [3 /*break*/, 2];
+                        return [4 /*yield*/, this.firebaseNative.getToken()];
+                    case 1:
+                        token = _a.sent();
+                        _a.label = 2;
+                    case 2:
+                        if (!this.platform.is('ios')) return [3 /*break*/, 5];
+                        return [4 /*yield*/, this.firebaseNative.getToken()];
+                    case 3:
+                        token = _a.sent();
+                        return [4 /*yield*/, this.firebaseNative.grantPermission()];
+                    case 4:
+                        _a.sent();
+                        _a.label = 5;
+                    case 5:
+                        this.saveTokenToFirestore(token);
+                        return [2 /*return*/, token];
+                }
+            });
+        });
+    };
+    // Save the token to firestore
+    FcmProvider.prototype.saveTokenToFirestore = function (token) {
+        if (!token)
+            return;
+        var devicesRef = this.afs.collection('devices');
+        var docData = {
+            token: token,
+            userId: 'capsul',
+        };
+        return devicesRef.doc(token).set(docData);
+    };
+    // Listen to incoming FCM messages
+    FcmProvider.prototype.listenToNotifications = function () {
+        return this.firebaseNative.onNotificationOpen();
+    };
+    FcmProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ionic_native_firebase__["a" /* Firebase */],
+            __WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore__["a" /* AngularFirestore */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* Platform */]])
+    ], FcmProvider);
+    return FcmProvider;
+}());
+
+//# sourceMappingURL=fcm.js.map
+
+/***/ }),
+
+/***/ 277:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SldnotificationProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/*
+  Generated class for the SldnotificationProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var SldnotificationProvider = /** @class */ (function () {
+    function SldnotificationProvider(http) {
+        this.http = http;
+        console.log('Hello SldnotificationProvider Provider');
+    }
+    SldnotificationProvider.prototype.save = function (uuid, token) {
+        var _this = this;
+        var url = 'http://www.bizztofly.com/modules/sld_notification/mobile-notification.php?uuid=' + uuid + '&fcm=' + token;
+        return new Promise(function (resolve) {
+            _this.http.get(url)
+                .subscribe();
+        });
+        /*let response = await this.http.get(url);
+      console.log(response);
+        return response;*/
+    };
+    SldnotificationProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+    ], SldnotificationProvider);
+    return SldnotificationProvider;
+}());
+
+//# sourceMappingURL=sldnotification.js.map
+
+/***/ }),
+
+/***/ 278:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_themeable_browser__ = __webpack_require__(475);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_barcode_scanner__ = __webpack_require__(279);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var HomePage = /** @class */ (function () {
+    function HomePage(navCtrl, tb, platform, navParams, barcodeScanner) {
+        this.navCtrl = navCtrl;
+        this.tb = tb;
+        this.platform = platform;
+        this.navParams = navParams;
+        this.barcodeScanner = barcodeScanner;
+        this.urlBeforeClose = "";
+    }
+    HomePage.prototype.ngOnInit = function () {
+        this.urlBeforeClose = 'https://www.champion-direct.com';
+        this.reopenBrowser();
+    };
+    HomePage.prototype.reopenBrowser = function () {
+        if (this.isIos()) {
+            var options = {
+                statusbar: {
+                    color: '#f53d3d'
+                },
+                toolbar: {
+                    height: 44,
+                    color: '#ffffff'
+                },
+                title: {
+                    color: '#003264ff',
+                    showPageTitle: true
+                },
+                backButton: {
+                    image: 'ic_action_previous_item',
+                    imagePressed: 'ic_action_previous_item',
+                    align: 'left',
+                    event: 'backPressed'
+                },
+                forwardButton: {
+                    image: 'ic_action_next_item',
+                    imagePressed: 'ic_action_next_item',
+                    align: 'left',
+                    event: 'forwardPressed'
+                },
+                closeButton: {
+                    image: 'ic_action_remove',
+                    imagePressed: 'ic_action_remove',
+                    align: 'left',
+                    event: 'closePressed'
+                },
+                backButtonCanClose: true
+            };
+            this.browser = this.tb.create(this.urlBeforeClose, '_blank', options);
+        }
+        else {
+            alert("Not ios platform");
+        }
+    };
+    HomePage.prototype.openScanner = function () {
+        var _this = this;
+        this.barcodeScanner.scan().then(function (result) {
+            if (!result.cancelled)
+                _this.urlBeforeClose = 'https://www.champion-direct.com/module/ambjolisearch/jolisearch?search_query=' + result.text;
+            _this.reopenBrowser();
+        });
+    };
+    HomePage.prototype.isIos = function () {
+        return this.platform.is('ios');
+    };
+    HomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-home',template:/*ion-inline-start:"/Users/integrateur/Documents/web-test/web/src/pages/home/home.html"*/'<ion-header class="display-header">\n	<!--<p class="display-header">Header qui doit apparaitre</p>-->\n</ion-header>\n\n<ion-content padding>\n	<div *ngIf="isIos()">\n		<button ion-button (click)="reopenBrowser()">Accéder au site web</button>\n		<br>\n		<!--<button ion-button (click)="openScanner()">Scanner un code barre</button>-->\n		<ion-item (click)="openScanner()"><ion-icon item-left name="camera"></ion-icon>&nbsp;Scanner le code barre d\'un produit</ion-item>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/integrateur/Documents/web-test/web/src/pages/home/home.html"*/,
+            providers: [__WEBPACK_IMPORTED_MODULE_2__ionic_native_themeable_browser__["a" /* ThemeableBrowser */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_barcode_scanner__["a" /* BarcodeScanner */]]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_themeable_browser__["a" /* ThemeableBrowser */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_barcode_scanner__["a" /* BarcodeScanner */]])
+    ], HomePage);
+    return HomePage;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 280:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(403);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 403:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(266);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(267);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_in_app_browser__ = __webpack_require__(452);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common_http__ = __webpack_require__(268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_device__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_firebase__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angularfire2__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angularfire2_firestore__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_component__ = __webpack_require__(474);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_home_home__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_fcm_fcm__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_sldnotification_sldnotification__ = __webpack_require__(277);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var firebase = {
+    apiKey: "AIzaSyAF7lnc_tO1nQTPsex4TM1rp1wLPI9D11w",
+    authDomain: "capsule-f4a8a.firebaseapp.com",
+    databaseURL: "https://capsule-f4a8a.firebaseio.com",
+    projectId: "capsule-f4a8a",
+    storageBucket: "capsule-f4a8a.appspot.com",
+    messagingSenderId: "708163343895"
+};
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_home_home__["a" /* HomePage */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* MyApp */], {}, {
+                    links: [
+                        { loadChildren: '../pages/barcode-scanner/barcode-scanner.module#BarcodeScannerPageModule', name: 'BarcodeScannerPage', segment: 'barcode-scanner', priority: 'low', defaultHistory: [] }
+                    ]
+                }),
+                __WEBPACK_IMPORTED_MODULE_9_angularfire2__["a" /* AngularFireModule */].initializeApp(firebase),
+                __WEBPACK_IMPORTED_MODULE_10_angularfire2_firestore__["b" /* AngularFirestoreModule */],
+                __WEBPACK_IMPORTED_MODULE_6__angular_common_http__["b" /* HttpClientModule */]
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_home_home__["a" /* HomePage */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_5__ionic_native_in_app_browser__["a" /* InAppBrowser */],
+                __WEBPACK_IMPORTED_MODULE_8__ionic_native_firebase__["a" /* Firebase */],
+                __WEBPACK_IMPORTED_MODULE_13__providers_fcm_fcm__["a" /* FcmProvider */],
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_14__providers_sldnotification_sldnotification__["a" /* SldnotificationProvider */],
+                __WEBPACK_IMPORTED_MODULE_7__ionic_native_device__["a" /* Device */]
+            ]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 474:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(267);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(266);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_device__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_fcm_fcm__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_sldnotification_sldnotification__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operators__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(278);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+//import { Subject } from 'rxjs/Subject';
+
+
+var MyApp = /** @class */ (function () {
+    function MyApp(platform, statusBar, splashScreen, fcm, sldnotification, toastCtrl, device) {
+        var _this = this;
+        this.device = device;
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */];
+        platform.ready().then(function () {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            // Get a FCM token
+            //let token;
+            fcm.getToken().then(function (token) {
+                sldnotification.save(_this.device.uuid, token);
+            });
+            // Listen to incoming messages
+            fcm.listenToNotifications().pipe(Object(__WEBPACK_IMPORTED_MODULE_7_rxjs_operators__["tap"])(function (msg) {
+                console.log(msg);
+                // show a toast
+                var toast = toastCtrl.create({
+                    message: msg.body,
+                    duration: 3000
+                });
+                toast.present();
+            })).subscribe();
+            statusBar.styleDefault();
+            splashScreen.hide();
+        });
+    }
+    MyApp = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/integrateur/Documents/web-test/web/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/integrateur/Documents/web-test/web/src/app/app.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_fcm_fcm__["a" /* FcmProvider */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_sldnotification_sldnotification__["a" /* SldnotificationProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_device__["a" /* Device */]])
+    ], MyApp);
+    return MyApp;
+}());
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ })
+
+},[280]);
+//# sourceMappingURL=main.js.map

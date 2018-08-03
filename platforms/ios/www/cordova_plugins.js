@@ -59,11 +59,27 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-themeablebrowser.themeablebrowser",
+    "file": "plugins/cordova-plugin-themeablebrowser/www/themeablebrowser.js",
+    "pluginId": "cordova-plugin-themeablebrowser",
+    "clobbers": [
+      "cordova.ThemeableBrowser"
+    ]
+  },
+  {
     "id": "cordova-plugin-uniquedeviceid.UniqueDeviceID",
     "file": "plugins/cordova-plugin-uniquedeviceid/www/uniqueid.js",
     "pluginId": "cordova-plugin-uniquedeviceid",
     "merges": [
       "window.plugins.uniqueDeviceID"
+    ]
+  },
+  {
+    "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
+    "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
+    "pluginId": "phonegap-plugin-barcodescanner",
+    "clobbers": [
+      "cordova.plugins.barcodeScanner"
     ]
   }
 ];
@@ -77,8 +93,10 @@ module.exports.metadata =
   "cordova-plugin-ionic": "4.1.7",
   "cordova-plugin-ionic-keyboard": "2.0.5",
   "cordova-plugin-ionic-webview": "1.1.19",
+  "cordova-plugin-themeablebrowser": "0.2.17",
+  "cordova-plugin-uniquedeviceid": "1.3.2",
   "cordova-plugin-whitelist": "1.3.3",
-  "cordova-plugin-uniquedeviceid": "1.3.2"
+  "phonegap-plugin-barcodescanner": "8.0.0"
 };
 // BOTTOM OF METADATA
 });

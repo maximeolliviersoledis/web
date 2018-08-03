@@ -25677,3 +25677,14 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-bottom));
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
+
+page-home .display-header {
+  z-index: 111;
+  color: #4f4f4f;
+  text-align: center;
+}
+
+page-home .display-over-browser {
+  z-index: 99999999;
+  color: #f53d3d;
+}

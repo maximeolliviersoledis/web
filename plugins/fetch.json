@@ -77,5 +77,21 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-themeablebrowser": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-themeablebrowser"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "phonegap-plugin-barcodescanner": {
+    "source": {
+      "type": "registry",
+      "id": "phonegap-plugin-barcodescanner@^8.0.0"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }
